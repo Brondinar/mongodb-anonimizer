@@ -1,21 +1,25 @@
 {
-  "name": "app",
+  "name": "sync",
   "version": "0.0.1",
-  "description": "Test application for generating documents",
-  "main": "dist/app.js",
+  "description": "Documents anonymizer",
+  "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "sync": "bin/sync.js"
+  },
   "scripts": {
     "prepack": "npm run build",
     "dev": "npx rimraf dist && tsc -w",
     "build": "npx rimraf dist && tsc",
-    "start": "node ./dist/app.js"
+    "start": "node ./bin/sync.js",
+    "start:full-reindex": "pnpm run start --full-reindex"
   },
   "keywords": [],
   "author": "Vladislav D.",
   "license": "ISC",
   "dependencies": {
-    "@faker-js/faker": "^8.0.1",
     "dotenv": "^16.0.3",
+    "eventemitter3": "^4.0.7",
     "mongodb": "^5.5.0",
     "shared": "workspace:*"
   },

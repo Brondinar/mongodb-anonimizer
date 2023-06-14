@@ -1,27 +1,25 @@
 {
-  "name": "app",
+  "name": "shared",
   "version": "0.0.1",
-  "description": "Test application for generating documents",
-  "main": "dist/app.js",
+  "description": "Shared code",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "prepack": "npm run build",
     "dev": "npx rimraf dist && tsc -w",
     "build": "npx rimraf dist && tsc",
-    "start": "node ./dist/app.js"
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "Vladislav D.",
   "license": "ISC",
   "dependencies": {
-    "@faker-js/faker": "^8.0.1",
-    "dotenv": "^16.0.3",
-    "mongodb": "^5.5.0",
-    "shared": "workspace:*"
+    "mongodb": "^5.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.3",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.8.4"
+    "typescript": "^5.0.4",
+    "tsconfig": "workspace:*"
   }
 }

@@ -6,7 +6,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "eslint \"./apps/**/*.ts\"",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start-app": "pnpm --filter=app start",
+    "start-sync": "pnpm --filter=sync start",
+    "start-sync:full-reindex": "pnpm --filter=sync start:full-reindex"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
