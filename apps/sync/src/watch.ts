@@ -41,7 +41,7 @@ export const runWatcher = async ({
           // todo: смотреть только изменяемые поля, а не заменять весь документ
           bulkOperations.push({
             replaceOne: {
-              filter: { _id: change.documentKey },
+              filter: { _id: change.fullDocument._id },
               replacement: anonymizeDocument(change.fullDocument, config.anonymizeFields),
             },
           });
